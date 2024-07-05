@@ -1,0 +1,91 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+        "color": {
+            "palette": [
+                {
+                    "slug": "deep-blue",
+                    "color": "#082032",
+                    "name": "Dark Deep Blue"
+                },
+                {
+                    "slug": "fire-red",
+                    "color": "#FF4C29",
+                    "name": "Fire Red"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "Roboto",
+                    "slug": "roboto-heavy",
+                    "name": "Roboto-heavy"
+                },
+                {
+                    "fontFamily": "Roboto Light",
+                    "slug": "roboto-light",
+                    "name": "Roboto Light"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "slug": "big",
+                    "size": 32,
+                    "name": "Big"
+                },
+                {
+                    "slug": "x-large",
+                    "size": 46,
+                    "name": "Large"
+                }
+            ]
+        },
+        "spacing": {
+            "spacingScale": {
+                "operator": "*",
+                "increment": 1.5,
+                "steps": 7,
+                "mediumStep": 1.5,
+                "unit": "rem"
+            },
+            "spacingSizes": [
+                {
+                    "slug": "40",
+                    "size": "1rem",
+                    "name": "Small"
+                },
+                {
+                    "slug": "50",
+                    "size": "1.5rem",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "60",
+                    "size": "2rem",
+                    "name": "Large"
+                }
+            ]
+        },
+        "blocks": {
+            "core/group": {
+                "color": {
+                    "palette": [
+                        {
+                            "slug": "black",
+                            "color": "#000000",
+                            "name": "Black"
+                        },
+                        {
+                            "slug": "white",
+                            "color": "#ffffff",
+                            "name": "White"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

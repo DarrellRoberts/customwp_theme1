@@ -1,0 +1,150 @@
+/* 
+Theme Name: MinimalTheme
+Text Domain: MinimalTheme
+Version: 1.0
+Description: Darrell's first custom theme
+Tags: responsive, minimal
+Author: Darrell Roberts
+Author URI: https://darrellroberts.com
+*/
+
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* latin */
+@font-face {
+    font-family: 'Roboto Light';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --primary: #082032;
+    --secondary: #2C394B;
+    --tertiary: #334756;
+    --text: #FF4C29;
+
+    --mainFont: 'Roboto';
+    --secondaryFont: 'Roboto Light';
+}
+
+body {
+    background: var(--primary);
+    color: var(--text);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+    letter-spacing: 2px;
+}
+
+a {
+    color: var(--text);
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        body {
+            animation: changeBackgroundColor linear both;
+            animation-timeline: scroll();
+        }
+    }
+} */
+/* 
+@keyframes changeBackgroundColor {
+    0% {
+        background: var(--primary);    }
+    75% {
+        background: var(--secondary);    }
+    100% {
+        background: var(--tertiary);
+    }
+} */
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 33%;
+}
+
+.navbarContainer {
+    width: 67%;
+    align-self: center;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.navlistContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+}
+
+.navlistContainer li a {
+    color: var(--text);;
+}
+
+.navbarContainer li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbarContainer li a:hover {
+    text-decoration: none;
+}
+
+.navbarContainer li:hover::after {
+    transform: scaleX(1);
+}
+
+[type="submit"] {
+    background-color: transparent;
+    color: var(--text);
+    border-radius: 5px;
+}
+
+[type="search"], [type="text"] {
+    background-color: transparent;
+    color: var(--text);
+    font-family: var(--secondaryFont);
+}
+
+@media screen and (max-width: 800px) {
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .logoContainer {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 1rem;
+    }
+}
